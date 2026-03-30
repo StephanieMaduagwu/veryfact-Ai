@@ -108,6 +108,12 @@ export default function HowItWorks() {
         {/* Decorative background */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -mr-48 -mt-48" />
       </section>
+
+      <section className="text-center pt-8 border-t border-gray-100">
+        <p className="text-sm text-gray-400">
+          Veryfact AI was developed by <span className="font-bold text-gray-600">AMADI TEMPLE MADUBOCHI</span> as a school project from <span className="italic">Ignatius Ajuru University of Education</span>.
+        </p>
+      </section>
     </div>
   );
 }

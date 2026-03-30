@@ -115,15 +115,27 @@ export default function App() {
         </main>
 
         <footer className="max-w-5xl mx-auto px-4 py-12 border-t border-gray-200 mt-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-400 font-medium">
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4" />
-              <span>&copy; 2026 Veryfact AI. All rights reserved.</span>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-sm text-gray-400 font-medium">
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4" />
+                <span>&copy; 2026 Veryfact AI. All rights reserved.</span>
+              </div>
+              <p className="text-xs text-gray-400/80 max-w-md">
+                Developed by <span className="font-bold text-gray-500">AMADI TEMPLE MADUBOCHI</span> as a school project from <span className="italic text-gray-400">Ignatius Ajuru University of Education</span>.
+              </p>
             </div>
             <div className="flex items-center gap-8">
               <a href="#" className="hover:text-emerald-600 transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-emerald-600 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-emerald-600 transition-colors">Contact</a>
+              <a 
+                href="https://wa.me/2348124424085" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-emerald-600 transition-colors font-bold text-emerald-600/80"
+              >
+                Contact
+              </a>
             </div>
           </div>
         </footer>
