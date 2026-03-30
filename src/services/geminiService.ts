@@ -1,11 +1,20 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
 const getApiKey = () => {
-  const key = process.env.GEMINI_API_KEY;
-  if (!key || key === "undefined" || key === "MY_GEMINI_API_KEY") {
-    return null;
+  // 1. Check for the new custom key first (to avoid reserved name issues)
+  // We check both process.env and import.meta.env for maximum compatibility
+  const customKey = process.env.VITE_GEMINI_API_KEY || (import.meta.env && import.meta.env.VITE_GEMINI_API_KEY);
+  if (customKey && customKey !== "undefined" && customKey.trim() !== "") {
+    return customKey;
   }
-  return key;
+
+  // 2. Fallback to the standard key
+  const key = process.env.GEMINI_API_KEY;
+  if (key && key !== "undefined" && key !== "MY_GEMINI_API_KEY" && key.trim() !== "") {
+    return key;
+  }
+  
+  return null;
 };
 
 const apiKey = getApiKey();
